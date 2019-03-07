@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+  <h1 class="text-center">Eat-Da-Burger!</h1>
+  </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="text-center">Burger List</h2>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <p >{{id}}: {{burger_name}} <button class="dev-button" data-id="{{id}}" data-ch-dev="{{devoured}}">
+        Devour It!</button></p>
+
+    {{/unless}}
+    {{/each}}
+  </div>
+
+  <div class="col-md-6">
+    <h2 class="text-center">Devoured Burgers</h2>
+    {{#each burgers}}
+    {{#if devoured}}
+    <p>{{id}}: {{burger_name}}</p>
+    {{/if}}
+    {{/each}}
+  </div>
+</div>
+
+  <div class="adding-burg">
+    <h2>Add a Burger</h2>
+    <form class="create-form">
+
+      <div class="form-group">
+        <label for="burg">Burger Name:</label>
+        <input type="text" id="burg" name="name">
+      </div>
+      <button type="submit">Add Burger</button>
+    </form>
+  </div>
+
+</div>
