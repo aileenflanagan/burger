@@ -1,5 +1,6 @@
 $(function() {
     $(".dev-button").on("click", function(event) {
+      console.log("devouring");
       var id = $(this).data("id");
       var changeDev= $(this).data("ch-dev")
   
